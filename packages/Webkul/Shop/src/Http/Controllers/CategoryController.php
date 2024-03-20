@@ -62,10 +62,9 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getCategoryProductMaximumPrice($categoryId = 2)
+    public function getCategoryProductMaximumPrice($categoryId = 1)
     {
         $category = $this->categoryRepository->findOrFail($categoryId);
-
         $maxPrice = $this->productFlatRepository->handleCategoryProductMaximumPrice($category);
 
         return response()->json([

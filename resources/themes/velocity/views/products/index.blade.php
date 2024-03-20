@@ -33,6 +33,7 @@
     </style>
 @endpush
 
+
 @php
     $isProductsDisplayMode = true;
 
@@ -44,6 +45,7 @@
 @stop
 
 @push('scripts')
+
     <script type="text/x-template" id="category-template">
         <section class="container-fluidvelocity-divide-page category-page-wrapper pb-5">
             <div class="row">

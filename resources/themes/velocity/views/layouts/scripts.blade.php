@@ -4,6 +4,7 @@
 
 <script type="text/javascript" src="{{ asset(mix('/js/components.js', 'themes/velocity/assets')) }}"></script>
 
+
 <script type="text/javascript">
     (() => {
         /* activate session messages */
