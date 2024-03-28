@@ -437,8 +437,8 @@ return [
         'from-z-a'                 => 'From Z-A',
         'newest-first'             => 'Newest First',
         'oldest-first'             => 'Oldest First',
-        'cheapest-first'           => 'Cheapest First',
-        'expensive-first'          => 'Expensive First',
+        'cheapest-first'           => 'Lowest Price First',
+        'expensive-first'          => 'Highest Price First',
         'show'                     => 'Show',
         'pager-info'               => 'Showing :showing of :total Items',
         'description'              => 'Description',
@@ -577,9 +577,9 @@ return [
             'payment-method-name' => [
                 'PayPal Smart Button' => 'PayPal Smart Button',
                 'PayPal'              => 'PayPal',
-                'Cash On Delivery'    => 'Cash On Delivery',                
-                'Money Transfer'      => 'Money Transfer',                
-                'Paypal Standard'     => 'PayPal Standard'    
+                'Cash On Delivery'    => 'Cash On Delivery',
+                'Money Transfer'      => 'Money Transfer',
+                'PayPal Standard'     => 'PayPal Standard'
             ],
             'summary'             => 'Order Summary',
             'price'               => 'Price',

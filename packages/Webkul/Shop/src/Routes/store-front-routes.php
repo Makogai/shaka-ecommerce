@@ -56,6 +56,8 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     });
 
     Route::get('/shop', [ProductController::class, 'getAll'])->name('shop.getAllProducts');
+    Route::get('/giftcard', [ProductController::class, 'getGiftCardView'])->name('shop.giftCard');
+    Route::post('/giftcard', [ProductController::class, 'sendGiftCard'])->name('shop.sendGiftCard');
 
     /**
      * Store front home.

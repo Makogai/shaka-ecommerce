@@ -69,7 +69,7 @@
                                             if ($product->getTypeInstance()->showQuantityBox()) {
                                                 $showUpdateCartButton = true;
                                             }
-                                                
+
                                             if (is_null ($product->url_key)) {
                                                 if (! is_null($product->parent)) {
                                                     $url_key = $product->parent->url_key;
@@ -152,14 +152,14 @@
                                                         @endif
                                                     @endauth
 
-                                                    <div class="d-inline-block">
+                                                    <div class="d-inline-block remove-icon">
                                                         <a
                                                             class="unset"
                                                             href="{{ route('shop.checkout.cart.remove', ['id' => $item->id]) }}"
                                                             @click="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">
 
-                                                            <span class="rango-delete fs24"></span>
-                                                            <span class="align-vertical-super">{{ __('shop::app.checkout.cart.remove') }}</span>
+                                                            <span class="rango-delete fs24" style="margin-top:5px;"></span>
+                                                            <span>{{ __('shop::app.checkout.cart.remove') }}</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -194,11 +194,11 @@
 
                                 {!! view_render_event('bagisto.shop.checkout.cart.controls.after', ['cart' => $cart]) !!}
                                 <div class="misc">
-                                    <a
-                                        class="theme-btn light fs16 text-center"
-                                        href="{{ route('shop.home.index') }}">
-                                        {{ __('shop::app.checkout.cart.continue-shopping') }}
-                                    </a>
+{{--                                    <a--}}
+{{--                                        class="theme-btn light fs16 text-center"--}}
+{{--                                        href="{{ route('shop.home.index') }}">--}}
+{{--                                        {{ __('shop::app.checkout.cart.continue-shopping') }}--}}
+{{--                                    </a>--}}
 
                                     <form
                                         method="POST"
@@ -208,20 +208,22 @@
                                         <button
                                             type="submit"
                                             onclick="return confirm('{{ __('shop::app.checkout.cart.confirm-action') }}')"
-                                            class="theme-btn light unset">
+                                            class="theme-btn light unset"
+                                            style="box-shadow: none !important; border: 2px solid rgba(0, 0, 0, 0.12) !important; color: rgb(118, 118, 118) !important;"
+                                            >
 
                                             {{ __('shop::app.checkout.cart.remove-all-items') }}
                                         </button>
                                     </form>
 
-                                    @if ($showUpdateCartButton)
-                                        <button
-                                            type="submit"
-                                            class="theme-btn light unset">
+{{--                                    @if ($showUpdateCartButton)--}}
+{{--                                        <button--}}
+{{--                                            type="submit"--}}
+{{--                                            class="theme-btn light unset">--}}
 
-                                            {{ __('shop::app.checkout.cart.update-cart') }}
-                                        </button>
-                                    @endif
+{{--                                            {{ __('shop::app.checkout.cart.update-cart') }}--}}
+{{--                                        </button>--}}
+{{--                                    @endif--}}
                                 </div>
 
                                 {!! view_render_event('bagisto.shop.checkout.cart.controls.after', ['cart' => $cart]) !!}
@@ -247,7 +249,7 @@
 
                         <a
                             class="fs16 mt15 col-12 remove-decoration continue-shopping"
-                            href="{{ route('shop.home.index') }}">
+                            href="{{ route('shop.getAllProducts') }}">
 
                             <button type="button" class="theme-btn remove-decoration">
                                 {{ __('shop::app.checkout.cart.continue-shopping') }}

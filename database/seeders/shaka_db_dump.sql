@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.33, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.36, for Linux (x86_64)
 --
--- Host: localhost    Database: bagisto
+-- Host: 127.0.0.1    Database: shaka_ecomm_db
 -- ------------------------------------------------------
--- Server version	8.0.33-0ubuntu0.22.04.2
+-- Server version	8.0.36-0ubuntu0.22.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -61,7 +61,6 @@ CREATE TABLE `addresses` (
 
 LOCK TABLES `addresses` WRITE;
 /*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
-INSERT INTO `addresses` VALUES (1,'cart_billing',1,2,NULL,'Marko','Pejanovic',NULL,'Marko Pejanovic','VI Crnogorska T10',NULL,'81400','Niksic','Montenegro','ME','mare.sampbn@gmail.com','069592736',NULL,0,NULL,'2023-01-29 17:42:15','2023-01-29 17:42:15'),(2,'cart_shipping',1,2,NULL,'Marko','Pejanovic',NULL,'Marko Pejanovic','VI Crnogorska T10',NULL,'81400','Niksic','Montenegro','ME','mare.sampbn@gmail.com','069592736',NULL,0,NULL,'2023-01-29 17:42:15','2023-01-29 17:42:15'),(3,'customer',1,NULL,NULL,'Marko','Pejanovic',NULL,'Marko Pejanovic','VI Crnogorska T10',NULL,'81400','Niksic','Montenegro','ME','mare.sampbn@gmail.com','069592736',NULL,0,NULL,'2023-01-29 17:42:17','2023-01-29 17:42:17'),(4,'order_shipping',NULL,NULL,1,'Marko','Pejanovic',NULL,'Marko Pejanovic','VI Crnogorska T10',NULL,'81400','Niksic','Montenegro','ME','mare.sampbn@gmail.com','069592736',NULL,0,NULL,'2023-01-29 17:43:00','2023-01-29 17:43:00'),(5,'order_billing',NULL,NULL,1,'Marko','Pejanovic',NULL,'Marko Pejanovic','VI Crnogorska T10',NULL,'81400','Niksic','Montenegro','ME','mare.sampbn@gmail.com','069592736',NULL,0,NULL,'2023-01-29 17:43:00','2023-01-29 17:43:00'),(6,'cart_billing',1,3,NULL,'Marko','Pejanovic',NULL,'Marko Pejanovic','VI Crnogorska T10',NULL,'81400','Niksic','Montenegro','ME','mare.sampbn@gmail.com','069592736',NULL,0,NULL,'2023-02-16 13:31:53','2023-02-16 13:31:53'),(7,'cart_shipping',1,3,NULL,'Marko','Pejanovic',NULL,'Marko Pejanovic','VI Crnogorska T10',NULL,'81400','Niksic','Montenegro','ME','mare.sampbn@gmail.com','069592736',NULL,0,NULL,'2023-02-16 13:31:53','2023-02-16 13:31:53');
 /*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -634,7 +633,6 @@ CREATE TABLE `cart` (
 
 LOCK TABLES `cart` WRITE;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-INSERT INTO `cart` VALUES (1,NULL,NULL,NULL,NULL,NULL,0,1,1.0000,NULL,'USD','USD','USD','USD',49.9900,49.9900,49.9900,49.9900,0.0000,0.0000,0.0000,0.0000,NULL,1,1,NULL,NULL,1,'2023-01-29 17:41:33','2023-01-29 17:41:33',''),(2,'mare.sampbn@gmail.com','Marko','Pejanovic','free_free',NULL,0,1,1.0000,NULL,'USD','USD','USD','USD',49.9900,49.9900,49.9900,49.9900,0.0000,0.0000,0.0000,0.0000,NULL,0,0,NULL,1,1,'2023-01-29 17:42:01','2023-01-29 17:43:00',''),(3,'mare.sampbn@gmail.com','Marko','Pejanovic','flatrate_flatrate',NULL,0,1,3.0000,NULL,'USD','USD','USD','USD',169.9700,169.9700,149.9700,149.9700,0.0000,0.0000,0.0000,0.0000,NULL,0,1,NULL,1,1,'2023-02-16 13:28:36','2023-02-18 22:04:29',''),(4,NULL,NULL,NULL,NULL,NULL,0,1,1.0000,NULL,'USD','USD','USD','USD',49.9900,49.9900,49.9900,49.9900,0.0000,0.0000,0.0000,0.0000,NULL,1,1,NULL,NULL,1,'2023-02-16 13:34:32','2023-02-16 13:34:32','');
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -719,7 +717,6 @@ CREATE TABLE `cart_items` (
 
 LOCK TABLES `cart_items` WRITE;
 /*!40000 ALTER TABLE `cart_items` DISABLE KEYS */;
-INSERT INTO `cart_items` VALUES (1,1,'1','simple','Smolo',NULL,1.0000,1.0000,1.0000,49.9900,49.9900,49.9900,49.9900,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,'{\"_token\": \"XvTIbYDyIvyGPL4K6JuHOM2pXiTAEL9n6ovAMIKK\", \"quantity\": 1, \"product_id\": \"1\"}',NULL,1,1,NULL,'2023-01-29 17:41:33','2023-01-29 17:41:33',NULL,''),(2,1,'1','simple','Smolo',NULL,1.0000,1.0000,1.0000,49.9900,49.9900,49.9900,49.9900,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,'{\"_token\": \"XvTIbYDyIvyGPL4K6JuHOM2pXiTAEL9n6ovAMIKK\", \"quantity\": 1, \"product_id\": \"1\"}',NULL,1,2,NULL,'2023-01-29 17:42:01','2023-01-29 17:42:25',NULL,''),(3,3,'1','simple','Smolo',NULL,1.0000,3.0000,3.0000,49.9900,49.9900,149.9700,149.9700,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,'{\"_token\": \"z1qrXiNEvrBsDvYyQpnGuj6srz6rQbaKckHD9uN4\", \"quantity\": 3, \"product_id\": \"1\"}',NULL,1,3,NULL,'2023-02-16 13:28:36','2023-02-18 22:04:29',NULL,''),(4,1,'1','simple','Smolo',NULL,1.0000,1.0000,1.0000,49.9900,49.9900,49.9900,49.9900,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,'{\"_token\": \"w6LlGvMKGLKtxC0FAp9rqI89vUXlBK6AoFpWWyp4\", \"quantity\": 1, \"product_id\": \"1\"}',NULL,1,4,NULL,'2023-02-16 13:34:32','2023-02-16 13:34:32',NULL,'');
 /*!40000 ALTER TABLE `cart_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -776,6 +773,7 @@ CREATE TABLE `cart_rule_channels` (
 
 LOCK TABLES `cart_rule_channels` WRITE;
 /*!40000 ALTER TABLE `cart_rule_channels` DISABLE KEYS */;
+INSERT INTO `cart_rule_channels` VALUES (1,1),(2,1),(3,1),(4,1);
 /*!40000 ALTER TABLE `cart_rule_channels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -865,6 +863,7 @@ CREATE TABLE `cart_rule_customer_groups` (
 
 LOCK TABLES `cart_rule_customer_groups` WRITE;
 /*!40000 ALTER TABLE `cart_rule_customer_groups` DISABLE KEYS */;
+INSERT INTO `cart_rule_customer_groups` VALUES (1,1),(2,1),(3,1),(4,1),(1,2),(2,2),(3,2),(4,2),(1,3),(2,3),(3,3),(4,3);
 /*!40000 ALTER TABLE `cart_rule_customer_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -957,7 +956,7 @@ CREATE TABLE `cart_rules` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -966,6 +965,7 @@ CREATE TABLE `cart_rules` (
 
 LOCK TABLES `cart_rules` WRITE;
 /*!40000 ALTER TABLE `cart_rules` DISABLE KEYS */;
+INSERT INTO `cart_rules` VALUES (1,'Gift Card 100€','',NULL,NULL,1,1,1,0,0,0,1,'[]',0,0,'by_fixed',100.0000,0,'0',0,0,0,'2024-03-19 13:10:16','2024-03-19 13:12:03'),(2,'Gift Card 300€','',NULL,NULL,1,1,1,0,0,0,1,NULL,0,0,'by_fixed',300.0000,0,'0',0,0,0,'2024-03-19 13:11:51','2024-03-19 13:11:51'),(3,'Gift Card 500€','',NULL,NULL,1,1,1,0,0,0,1,NULL,0,0,'by_fixed',500.0000,0,'0',0,0,0,'2024-03-19 13:12:28','2024-03-19 13:12:28'),(4,'Gift Card 1000€','',NULL,NULL,1,1,1,0,0,0,1,NULL,0,0,'by_fixed',1000.0000,0,'0',0,0,0,'2024-03-19 13:12:51','2024-03-19 13:12:51');
 /*!40000 ALTER TABLE `cart_rules` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1003,7 +1003,7 @@ CREATE TABLE `cart_shipping_rates` (
 
 LOCK TABLES `cart_shipping_rates` WRITE;
 /*!40000 ALTER TABLE `cart_shipping_rates` DISABLE KEYS */;
-INSERT INTO `cart_shipping_rates` VALUES (7,'flatrate','Flat Rate','flatrate_flatrate','Flat Rate','Flat Rate Shipping',10,10,2,'2023-01-29 17:42:20','2023-01-29 17:42:20',0.0000,0.0000,1),(8,'free','Free Shipping','free_free','Free Shipping','Free Shipping',0,0,2,'2023-01-29 17:42:20','2023-01-29 17:42:25',0.0000,0.0000,1),(19,'flatrate','Flat Rate','flatrate_flatrate','Flat Rate','Flat Rate Shipping',20,20,7,'2023-02-16 18:22:20','2023-02-18 22:04:29',0.0000,0.0000,1),(20,'free','Free Shipping','free_free','Free Shipping','Free Shipping',0,0,7,'2023-02-16 18:22:20','2023-02-16 18:22:20',0.0000,0.0000,1);
+INSERT INTO `cart_shipping_rates` VALUES (1,'flatrate','Flat Rate','flatrate_flatrate','Flat Rate','Flat Rate Shipping',10,10,2,'2023-01-29 17:42:20','2023-01-29 17:42:20',0.0000,0.0000,1),(2,'free','Free Shipping','free_free','Free Shipping','Free Shipping',0,0,2,'2023-01-29 17:42:20','2023-01-29 17:42:25',0.0000,0.0000,1);
 /*!40000 ALTER TABLE `cart_shipping_rates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1194,7 +1194,7 @@ CREATE TABLE `categories` (
   `additional` json DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `categories__lft__rgt_parent_id_index` (`_lft`,`_rgt`,`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1203,7 +1203,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,1,NULL,1,1,22,NULL,'2023-01-29 16:32:27','2023-01-29 16:32:27','products_and_description',NULL,NULL),(2,2,NULL,1,1,22,NULL,'2023-01-29 16:32:27','2023-01-29 16:32:27','products_and_description',NULL,NULL),(3,1,NULL,1,14,15,2,'2023-01-29 16:34:20','2023-07-06 23:48:43','products_and_description',NULL,NULL),(4,2,NULL,1,16,17,2,'2023-01-29 16:35:11','2023-07-06 23:48:43','products_and_description',NULL,NULL),(5,2,NULL,1,18,19,2,'2023-07-06 23:50:14','2023-07-06 23:50:14','products_and_description',NULL,NULL),(6,3,NULL,1,20,21,2,'2023-07-06 23:50:35','2023-07-06 23:50:35','products_and_description',NULL,NULL),(7,1,NULL,1,23,32,NULL,'2023-07-06 23:51:31','2023-07-06 23:51:31','products_and_description',NULL,NULL),(8,1,NULL,1,24,25,7,'2023-07-06 23:51:53','2023-07-06 23:51:53','products_and_description',NULL,NULL),(9,2,NULL,1,26,27,7,'2023-07-06 23:52:11','2023-07-06 23:52:11','products_and_description',NULL,NULL),(10,3,NULL,1,28,29,7,'2023-07-06 23:52:25','2023-07-06 23:52:25','products_and_description',NULL,NULL),(11,4,NULL,1,30,31,7,'2023-07-06 23:52:36','2023-07-06 23:52:36','products_and_description',NULL,NULL),(12,3,NULL,0,33,34,NULL,'2023-07-06 23:52:53','2023-07-07 00:10:28','products_and_description',NULL,NULL);
+INSERT INTO `categories` VALUES (1,1,NULL,1,1,28,NULL,'2023-01-29 16:32:27','2023-01-29 16:32:27','products_and_description',NULL,NULL),(2,2,NULL,1,1,28,NULL,'2023-01-29 16:32:27','2023-01-29 16:32:27','products_and_description',NULL,NULL),(3,1,NULL,1,14,15,2,'2023-01-29 16:34:20','2024-03-12 15:54:23','products_and_description',NULL,NULL),(4,2,NULL,1,16,17,2,'2023-01-29 16:35:11','2024-03-12 15:54:23','products_and_description',NULL,NULL),(5,2,NULL,1,18,19,2,'2023-07-06 23:50:14','2024-03-12 15:54:23','products_and_description',NULL,NULL),(6,4,NULL,1,20,21,2,'2023-07-06 23:50:35','2024-03-12 15:55:14','products_and_description',NULL,NULL),(13,5,NULL,1,22,23,2,'2024-03-12 15:55:56','2024-03-12 15:55:56','products_and_description',NULL,NULL),(14,6,NULL,1,24,25,2,'2024-03-12 15:56:17','2024-03-12 15:56:17','products_and_description',NULL,NULL),(15,7,NULL,1,26,27,2,'2024-03-12 15:56:32','2024-03-12 15:56:32','products_and_description',NULL,NULL),(16,2,NULL,1,29,30,NULL,'2024-03-12 15:56:45','2024-03-12 15:56:45','products_and_description',NULL,NULL),(17,3,NULL,1,31,32,NULL,'2024-03-12 15:56:58','2024-03-12 15:56:58','products_and_description',NULL,NULL),(18,3,NULL,1,33,34,NULL,'2024-03-12 15:57:18','2024-03-12 15:57:18','products_and_description',NULL,NULL),(19,4,NULL,1,35,36,NULL,'2024-03-12 15:57:30','2024-03-12 15:57:30','products_and_description',NULL,NULL),(20,5,NULL,1,37,38,NULL,'2024-03-12 15:57:44','2024-03-12 15:57:44','products_and_description',NULL,NULL);
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1230,7 +1230,7 @@ CREATE TABLE `category_filterable_attributes` (
 
 LOCK TABLES `category_filterable_attributes` WRITE;
 /*!40000 ALTER TABLE `category_filterable_attributes` DISABLE KEYS */;
-INSERT INTO `category_filterable_attributes` VALUES (1,11),(1,23),(1,24),(1,25),(1,28),(2,11),(2,23),(2,24),(2,25),(2,28),(3,11),(3,23),(3,24),(3,25),(3,28),(4,11),(4,23),(4,24),(4,25),(4,28),(5,11),(5,23),(5,24),(5,25),(5,28),(6,11),(6,23),(6,24),(6,25),(6,28),(7,11),(7,23),(7,24),(7,25),(7,28),(8,11),(8,23),(8,24),(8,25),(8,28),(9,11),(9,23),(9,24),(9,25),(9,28),(10,11),(10,23),(10,24),(10,25),(10,28),(11,11),(11,23),(11,24),(11,25),(11,28),(12,11);
+INSERT INTO `category_filterable_attributes` VALUES (1,11),(1,23),(1,24),(1,25),(1,28),(2,11),(2,23),(2,24),(2,25),(2,28),(3,11),(3,23),(3,24),(3,25),(3,28),(4,11),(4,23),(4,24),(4,25),(4,28),(5,11),(5,23),(5,24),(5,25),(5,28),(6,11),(6,23),(6,24),(6,25),(6,28),(13,11),(13,23),(13,24),(13,25),(13,28),(14,11),(14,23),(14,24),(14,25),(14,28),(15,11),(15,23),(15,24),(15,25),(15,28),(16,11),(17,11),(17,23),(17,24),(17,25),(17,28),(16,23),(16,24),(16,25),(16,28),(18,11),(18,23),(18,24),(18,25),(18,28),(19,11),(19,23),(19,24),(19,25),(19,28),(20,11),(20,23),(20,24),(20,25),(20,28);
 /*!40000 ALTER TABLE `category_filterable_attributes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1258,7 +1258,7 @@ CREATE TABLE `category_translations` (
   KEY `category_translations_locale_id_foreign` (`locale_id`),
   CONSTRAINT `category_translations_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE,
   CONSTRAINT `category_translations_locale_id_foreign` FOREIGN KEY (`locale_id`) REFERENCES `locales` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1267,7 +1267,7 @@ CREATE TABLE `category_translations` (
 
 LOCK TABLES `category_translations` WRITE;
 /*!40000 ALTER TABLE `category_translations` DISABLE KEYS */;
-INSERT INTO `category_translations` VALUES (1,'view all','view-all','<p>aa</p>','','','',1,'en',NULL,''),(2,'SHAKA','shaka','<p>asd</p>','','','',2,'en',NULL,''),(3,'Shirts','shirts','<p>asd</p>','','','',3,'en',NULL,''),(4,'Dresses','dresses','<p>asd</p>','','','',4,'en',NULL,''),(5,'Jeans','jeans','<p>jeans</p>','','','',5,'en',1,''),(10,'Coats','coats','<p>a</p>','','','',6,'en',1,''),(15,'KATARINA ZLAJIC','katarina-zlajic','<p>a</p>','','','',7,'en',1,''),(20,'Earings','earings','<p>a</p>','','','',8,'en',1,''),(25,'Bags','bags','<p>a</p>','','','',9,'en',1,''),(30,'Neckleces','neckleces','<p>a</p>','','','',10,'en',1,''),(35,'Shoes','shoes','<p>a</p>','','','',11,'en',1,''),(40,'GIFT CARDS','gift-cards','<p>a</p>','','','',12,'en',1,'');
+INSERT INTO `category_translations` VALUES (1,'view all','view-all','<p>aa</p>','','','',1,'en',NULL,''),(2,'JEWELLERY','jewellery','<p>asd</p>','','','',2,'en',NULL,''),(3,'Earrings','earrings','<p>asd</p>','','','',3,'en',NULL,''),(4,'Bracelets','bracelets','<p>asd</p>','','','',4,'en',NULL,''),(5,'Necklaces','necklaces','<p>jeans</p>','','','',5,'en',1,''),(10,'Rings','rings','<p>a</p>','','','',6,'en',1,''),(45,'Anklets','anklets','<p>SDASD</p>','','','',13,'en',1,''),(46,'Brooches','brooches','<p>sad</p>','','','',14,'en',1,''),(47,'Body jewellery','body-jewellery','<p>sda</p>','','','',15,'en',1,''),(48,'BAGS','bags','<p>sdasd</p>','','','',16,'en',1,''),(49,'SHOES','shoes','<p>zcxz</p>','','','',17,'en',1,''),(50,'HEADPIECES','headpieces','<p>asd</p>','','','',18,'en',1,''),(51,'DRESSES','dresses','<p>zzxcx</p>','','','',19,'en',1,''),(52,'MADE TO ORDER','made-to-order','<p>sdasda</p>','','','',20,'en',1,'');
 /*!40000 ALTER TABLE `category_translations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1362,12 +1362,12 @@ DROP TABLE IF EXISTS `channel_translations`;
 CREATE TABLE `channel_translations` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `channel_id` int unsigned NOT NULL,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `home_page_content` text COLLATE utf8mb4_unicode_ci,
-  `footer_content` text COLLATE utf8mb4_unicode_ci,
-  `maintenance_mode_text` text COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `home_page_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `footer_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `maintenance_mode_text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `home_seo` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -1384,7 +1384,7 @@ CREATE TABLE `channel_translations` (
 
 LOCK TABLES `channel_translations` WRITE;
 /*!40000 ALTER TABLE `channel_translations` DISABLE KEYS */;
-INSERT INTO `channel_translations` VALUES (1,1,'en','Default','','<p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\r\n<div class=\"banner-container\">\r\n<div class=\"left-banner\"><img src=\"http://localhost:8000/themes/default/assets/images/1.webp\" data-src=\"http://localhost:8000/themes/default/assets/images/1.webp\" class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" /></div>\r\n<div class=\"right-banner\"><img src=\"http://localhost:8000/themes/default/assets/images/2.webp\" data-src=\"http://localhost:8000/themes/default/assets/images/2.webp\" class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" /> <img src=\"http://localhost:8000/themes/default/assets/images/3.webp\" data-src=\"http://localhost:8000/themes/default/assets/images/3.webp\" class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" /></div>\r\n</div>','<div class=\"list-container\"><span class=\"list-heading\">Quick Links</span>\r\n<ul class=\"list-group\">\r\n<li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\r\n<li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\r\n<li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\r\n<li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\r\n<li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\r\n<li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\r\n</ul>\r\n</div>\r\n<div class=\"list-container\"><span class=\"list-heading\">Connect With Us</span>\r\n<ul class=\"list-group\">\r\n<li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\r\n<li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\r\n<li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\r\n<li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\r\n<li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\r\n</ul>\r\n</div>','','{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,'2023-07-07 00:11:05'),(2,1,'fr','Default',NULL,'\n                    <p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\n                        <div class=\"banner-container\">\n                        <div class=\"left-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/1.webp data-src=http://localhost:8000/themes/default/assets/images/1.webp class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" />\n                        </div>\n                        <div class=\"right-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/2.webp data-src=http://localhost:8000/themes/default/assets/images/2.webp class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                            <img src=http://localhost:8000/themes/default/assets/images/3.webp data-src=http://localhost:8000/themes/default/assets/images/3.webp  class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                        </div>\n                    </div>\n                ','\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Quick Links</span>\n                        <ul class=\"list-group\">\n                            <li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\n                            <li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\n                            <li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Connect With Us</span>\n                            <ul class=\"list-group\">\n                                <li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\n                            </ul>\n                        </div>\n                ',NULL,'{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,NULL),(3,1,'nl','Default',NULL,'\n                    <p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\n                        <div class=\"banner-container\">\n                        <div class=\"left-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/1.webp data-src=http://localhost:8000/themes/default/assets/images/1.webp class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" />\n                        </div>\n                        <div class=\"right-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/2.webp data-src=http://localhost:8000/themes/default/assets/images/2.webp class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                            <img src=http://localhost:8000/themes/default/assets/images/3.webp data-src=http://localhost:8000/themes/default/assets/images/3.webp  class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                        </div>\n                    </div>\n                ','\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Quick Links</span>\n                        <ul class=\"list-group\">\n                            <li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\n                            <li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\n                            <li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Connect With Us</span>\n                            <ul class=\"list-group\">\n                                <li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\n                            </ul>\n                        </div>\n                ',NULL,'{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,NULL),(4,1,'tr','Default',NULL,'\n                    <p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\n                        <div class=\"banner-container\">\n                        <div class=\"left-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/1.webp data-src=http://localhost:8000/themes/default/assets/images/1.webp class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" />\n                        </div>\n                        <div class=\"right-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/2.webp data-src=http://localhost:8000/themes/default/assets/images/2.webp class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                            <img src=http://localhost:8000/themes/default/assets/images/3.webp data-src=http://localhost:8000/themes/default/assets/images/3.webp  class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                        </div>\n                    </div>\n                ','\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Quick Links</span>\n                        <ul class=\"list-group\">\n                            <li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\n                            <li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\n                            <li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Connect With Us</span>\n                            <ul class=\"list-group\">\n                                <li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\n                            </ul>\n                        </div>\n                ',NULL,'{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,NULL),(5,1,'es','Default',NULL,'\n                    <p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\n                        <div class=\"banner-container\">\n                        <div class=\"left-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/1.webp data-src=http://localhost:8000/themes/default/assets/images/1.webp class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" />\n                        </div>\n                        <div class=\"right-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/2.webp data-src=http://localhost:8000/themes/default/assets/images/2.webp class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                            <img src=http://localhost:8000/themes/default/assets/images/3.webp data-src=http://localhost:8000/themes/default/assets/images/3.webp  class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                        </div>\n                    </div>\n                ','\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Quick Links</span>\n                        <ul class=\"list-group\">\n                            <li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\n                            <li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\n                            <li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Connect With Us</span>\n                            <ul class=\"list-group\">\n                                <li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\n                            </ul>\n                        </div>\n                ',NULL,'{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,NULL);
+INSERT INTO `channel_translations` VALUES (1,1,'en','Default','','<p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\r\n<div class=\"banner-container\">\r\n<div class=\"left-banner\"><img src=\"http://localhost:8000/themes/default/assets/images/1.webp\" data-src=\"http://localhost:8000/themes/default/assets/images/1.webp\" class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" /></div>\r\n<div class=\"right-banner\"><img src=\"http://localhost:8000/themes/default/assets/images/2.webp\" data-src=\"http://localhost:8000/themes/default/assets/images/2.webp\" class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" /> <img src=\"http://localhost:8000/themes/default/assets/images/3.webp\" data-src=\"http://localhost:8000/themes/default/assets/images/3.webp\" class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" /></div>\r\n</div>','<div class=\"list-container\"><span class=\"list-heading\">Quick Links</span>\r\n<ul class=\"list-group\">\r\n<li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\r\n<li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\r\n<li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\r\n<li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\r\n<li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\r\n<li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\r\n</ul>\r\n</div>\r\n<div class=\"list-container\"><span class=\"list-heading\">Connect With Us</span>\r\n<ul class=\"list-group\">\r\n<li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\r\n<li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\r\n<li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\r\n<li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\r\n<li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\r\n</ul>\r\n</div>','','{\"meta_title\": \"Shaka Ecommerce\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,'2024-03-25 17:25:31'),(2,1,'fr','Default',NULL,'\n                    <p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\n                        <div class=\"banner-container\">\n                        <div class=\"left-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/1.webp data-src=http://localhost:8000/themes/default/assets/images/1.webp class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" />\n                        </div>\n                        <div class=\"right-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/2.webp data-src=http://localhost:8000/themes/default/assets/images/2.webp class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                            <img src=http://localhost:8000/themes/default/assets/images/3.webp data-src=http://localhost:8000/themes/default/assets/images/3.webp  class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                        </div>\n                    </div>\n                ','\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Quick Links</span>\n                        <ul class=\"list-group\">\n                            <li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\n                            <li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\n                            <li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Connect With Us</span>\n                            <ul class=\"list-group\">\n                                <li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\n                            </ul>\n                        </div>\n                ',NULL,'{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,NULL),(3,1,'nl','Default',NULL,'\n                    <p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\n                        <div class=\"banner-container\">\n                        <div class=\"left-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/1.webp data-src=http://localhost:8000/themes/default/assets/images/1.webp class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" />\n                        </div>\n                        <div class=\"right-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/2.webp data-src=http://localhost:8000/themes/default/assets/images/2.webp class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                            <img src=http://localhost:8000/themes/default/assets/images/3.webp data-src=http://localhost:8000/themes/default/assets/images/3.webp  class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                        </div>\n                    </div>\n                ','\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Quick Links</span>\n                        <ul class=\"list-group\">\n                            <li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\n                            <li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\n                            <li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Connect With Us</span>\n                            <ul class=\"list-group\">\n                                <li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\n                            </ul>\n                        </div>\n                ',NULL,'{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,NULL),(4,1,'tr','Default',NULL,'\n                    <p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\n                        <div class=\"banner-container\">\n                        <div class=\"left-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/1.webp data-src=http://localhost:8000/themes/default/assets/images/1.webp class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" />\n                        </div>\n                        <div class=\"right-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/2.webp data-src=http://localhost:8000/themes/default/assets/images/2.webp class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                            <img src=http://localhost:8000/themes/default/assets/images/3.webp data-src=http://localhost:8000/themes/default/assets/images/3.webp  class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                        </div>\n                    </div>\n                ','\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Quick Links</span>\n                        <ul class=\"list-group\">\n                            <li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\n                            <li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\n                            <li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Connect With Us</span>\n                            <ul class=\"list-group\">\n                                <li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\n                            </ul>\n                        </div>\n                ',NULL,'{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,NULL),(5,1,'es','Default',NULL,'\n                    <p>@include(\"shop::home.slider\") @include(\"shop::home.featured-products\") @include(\"shop::home.new-products\")</p>\n                        <div class=\"banner-container\">\n                        <div class=\"left-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/1.webp data-src=http://localhost:8000/themes/default/assets/images/1.webp class=\"lazyload\" alt=\"test\" width=\"720\" height=\"720\" />\n                        </div>\n                        <div class=\"right-banner\">\n                            <img src=http://localhost:8000/themes/default/assets/images/2.webp data-src=http://localhost:8000/themes/default/assets/images/2.webp class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                            <img src=http://localhost:8000/themes/default/assets/images/3.webp data-src=http://localhost:8000/themes/default/assets/images/3.webp  class=\"lazyload\" alt=\"test\" width=\"460\" height=\"330\" />\n                        </div>\n                    </div>\n                ','\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Quick Links</span>\n                        <ul class=\"list-group\">\n                            <li><a href=\"http://localhost:8000/page/about-us\">About Us</a></li>\n                            <li><a href=\"http://localhost:8000/page/return-policy\">Return Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/refund-policy\">Refund Policy</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-conditions\">Terms and conditions</a></li>\n                            <li><a href=\"http://localhost:8000/page/terms-of-use\">Terms of Use</a></li>\n                            <li><a href=\"http://localhost:8000/page/contact-us\">Contact Us</a></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-container\">\n                        <span class=\"list-heading\">Connect With Us</span>\n                            <ul class=\"list-group\">\n                                <li><a href=\"#\"><span class=\"icon icon-facebook\"></span>Facebook </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-twitter\"></span> Twitter </a></li>\n                                <li><a href=\"#\"><span class=\"icon icon-instagram\"></span> Instagram </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-google-plus\"></span>Google+ </a></li>\n                                <li><a href=\"#\"> <span class=\"icon icon-linkedin\"></span>LinkedIn </a></li>\n                            </ul>\n                        </div>\n                ',NULL,'{\"meta_title\": \"Demo store\", \"meta_keywords\": \"Demo store meta keyword\", \"meta_description\": \"Demo store meta description\"}',NULL,NULL);
 /*!40000 ALTER TABLE `channel_translations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1397,14 +1397,14 @@ DROP TABLE IF EXISTS `channels`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `channels` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `timezone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `theme` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `hostname` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `favicon` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `timezone` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `theme` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hostname` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `logo` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `favicon` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_maintenance_on` tinyint(1) NOT NULL DEFAULT '0',
-  `allowed_ips` text COLLATE utf8mb4_unicode_ci,
+  `allowed_ips` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `default_locale_id` int unsigned NOT NULL,
   `base_currency_id` int unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -1426,7 +1426,7 @@ CREATE TABLE `channels` (
 
 LOCK TABLES `channels` WRITE;
 /*!40000 ALTER TABLE `channels` DISABLE KEYS */;
-INSERT INTO `channels` VALUES (1,'default',NULL,'velocity','http://localhost:8000',NULL,NULL,0,'',1,2,NULL,'2023-07-07 00:11:05',1);
+INSERT INTO `channels` VALUES (1,'default',NULL,'velocity','http://localhost:8000',NULL,'channel/1/u7EgN5HJS4eHx4Pu9YaWTX4POw6qbbbLFHIjCdWj.png',0,'',1,2,NULL,'2024-03-15 17:32:26',1);
 /*!40000 ALTER TABLE `channels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1465,13 +1465,13 @@ DROP TABLE IF EXISTS `cms_page_translations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cms_page_translations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `page_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `url_key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `page_title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url_key` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `html_content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `meta_title` text COLLATE utf8mb4_unicode_ci,
-  `meta_description` text COLLATE utf8mb4_unicode_ci,
-  `meta_keywords` text COLLATE utf8mb4_unicode_ci,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `meta_title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `meta_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `meta_keywords` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `cms_page_id` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cms_page_translations_cms_page_id_url_key_locale_unique` (`cms_page_id`,`url_key`,`locale`),
@@ -1498,7 +1498,7 @@ DROP TABLE IF EXISTS `cms_pages`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cms_pages` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `layout` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `layout` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -1524,11 +1524,11 @@ DROP TABLE IF EXISTS `contacts`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `contacts` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `message_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `message_body` text COLLATE utf8mb4_unicode_ci,
-  `message_reply` text COLLATE utf8mb4_unicode_ci,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message_title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message_body` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `message_reply` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -1553,15 +1553,15 @@ DROP TABLE IF EXISTS `core_config`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `core_config` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `value` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `channel_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `locale_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `channel_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `locale_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `core_config_channel_id_foreign` (`channel_code`)
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1570,7 +1570,7 @@ CREATE TABLE `core_config` (
 
 LOCK TABLES `core_config` WRITE;
 /*!40000 ALTER TABLE `core_config` DISABLE KEYS */;
-INSERT INTO `core_config` VALUES (1,'catalog.products.guest-checkout.allow-guest-checkout','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(2,'emails.general.notifications.emails.general.notifications.verification','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(3,'emails.general.notifications.emails.general.notifications.registration','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(4,'emails.general.notifications.emails.general.notifications.customer','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(5,'emails.general.notifications.emails.general.notifications.new-order','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(6,'emails.general.notifications.emails.general.notifications.new-admin','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(7,'emails.general.notifications.emails.general.notifications.new-invoice','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(8,'emails.general.notifications.emails.general.notifications.new-refund','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(9,'emails.general.notifications.emails.general.notifications.new-shipment','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(10,'emails.general.notifications.emails.general.notifications.new-inventory-source','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(11,'emails.general.notifications.emails.general.notifications.cancel-order','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(12,'catalog.products.homepage.out_of_stock_items','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(13,'customer.settings.social_login.enable_facebook','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(14,'customer.settings.social_login.enable_twitter','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(15,'customer.settings.social_login.enable_google','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(16,'customer.settings.social_login.enable_linkedin','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(17,'customer.settings.social_login.enable_github','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(18,'general.content.shop.compare_option','0','default','en','2023-07-06 23:43:37','2023-07-07 00:16:57'),(19,'general.content.shop.compare_option','1','default','fr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(20,'general.content.shop.compare_option','1','default','ar','2023-07-06 23:43:37','2023-07-06 23:43:37'),(21,'general.content.shop.compare_option','1','default','de','2023-07-06 23:43:37','2023-07-06 23:43:37'),(22,'general.content.shop.compare_option','1','default','es','2023-07-06 23:43:37','2023-07-06 23:43:37'),(23,'general.content.shop.compare_option','1','default','fa','2023-07-06 23:43:37','2023-07-06 23:43:37'),(24,'general.content.shop.compare_option','1','default','it','2023-07-06 23:43:37','2023-07-06 23:43:37'),(25,'general.content.shop.compare_option','1','default','ja','2023-07-06 23:43:37','2023-07-06 23:43:37'),(26,'general.content.shop.compare_option','1','default','nl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(27,'general.content.shop.compare_option','1','default','pl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(28,'general.content.shop.compare_option','1','default','pt_BR','2023-07-06 23:43:37','2023-07-06 23:43:37'),(29,'general.content.shop.compare_option','1','default','tr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(30,'general.content.shop.wishlist_option','1','default','en','2023-07-06 23:43:37','2023-07-06 23:43:37'),(31,'general.content.shop.wishlist_option','1','default','fr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(32,'general.content.shop.wishlist_option','1','default','ar','2023-07-06 23:43:37','2023-07-06 23:43:37'),(33,'general.content.shop.wishlist_option','1','default','de','2023-07-06 23:43:37','2023-07-06 23:43:37'),(34,'general.content.shop.wishlist_option','1','default','es','2023-07-06 23:43:37','2023-07-06 23:43:37'),(35,'general.content.shop.wishlist_option','1','default','fa','2023-07-06 23:43:37','2023-07-06 23:43:37'),(36,'general.content.shop.wishlist_option','1','default','it','2023-07-06 23:43:37','2023-07-06 23:43:37'),(37,'general.content.shop.wishlist_option','1','default','ja','2023-07-06 23:43:37','2023-07-06 23:43:37'),(38,'general.content.shop.wishlist_option','1','default','nl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(39,'general.content.shop.wishlist_option','1','default','pl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(40,'general.content.shop.wishlist_option','1','default','pt_BR','2023-07-06 23:43:37','2023-07-06 23:43:37'),(41,'general.content.shop.wishlist_option','1','default','tr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(42,'general.content.shop.image_search','1','default','en','2023-07-06 23:43:37','2023-07-06 23:43:37'),(43,'general.content.shop.image_search','1','default','fr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(44,'general.content.shop.image_search','1','default','ar','2023-07-06 23:43:37','2023-07-06 23:43:37'),(45,'general.content.shop.image_search','1','default','de','2023-07-06 23:43:37','2023-07-06 23:43:37'),(46,'general.content.shop.image_search','1','default','es','2023-07-06 23:43:37','2023-07-06 23:43:37'),(47,'general.content.shop.image_search','1','default','fa','2023-07-06 23:43:37','2023-07-06 23:43:37'),(48,'general.content.shop.image_search','1','default','it','2023-07-06 23:43:37','2023-07-06 23:43:37'),(49,'general.content.shop.image_search','1','default','ja','2023-07-06 23:43:37','2023-07-06 23:43:37'),(50,'general.content.shop.image_search','1','default','nl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(51,'general.content.shop.image_search','1','default','pl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(52,'general.content.shop.image_search','1','default','pt_BR','2023-07-06 23:43:37','2023-07-06 23:43:37'),(53,'general.content.shop.image_search','1','default','tr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(54,'general.general.locale_options.weight_unit','kgs','default',NULL,'2023-07-07 00:16:51','2023-07-07 00:16:51'),(55,'general.content.footer.footer_content','','default','en','2023-07-07 00:16:57','2023-07-07 00:16:57'),(56,'general.content.footer.footer_toggle','0','default','en','2023-07-07 00:16:57','2023-07-07 00:16:57'),(57,'general.content.custom_scripts.custom_css','','default',NULL,'2023-07-07 00:16:57','2023-07-07 00:16:57'),(58,'general.content.custom_scripts.custom_javascript','','default',NULL,'2023-07-07 00:16:57','2023-07-07 00:16:57'),(59,'catalog.products.homepage.no_of_new_product_homepage','9',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(60,'catalog.products.homepage.no_of_featured_product_homepage','',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(61,'catalog.products.storefront.mode','grid','default',NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(62,'catalog.products.storefront.products_per_page','','default',NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(63,'catalog.products.storefront.sort_by','name-desc','default',NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(64,'catalog.products.storefront.buy_now_button_display','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(65,'catalog.products.cache-small-image.width','330',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(66,'catalog.products.cache-small-image.height','383',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(67,'catalog.products.cache-medium-image.width','330',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(68,'catalog.products.cache-medium-image.height','383',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(69,'catalog.products.cache-large-image.width','330',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(70,'catalog.products.cache-large-image.height','383',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(71,'catalog.products.review.guest_review','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(72,'catalog.products.attribute.image_attribute_upload_size','',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(73,'catalog.products.attribute.file_attribute_upload_size','',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(74,'catalog.products.social_share.enabled','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(75,'catalog.products.social_share.facebook','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(76,'catalog.products.social_share.twitter','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(77,'catalog.products.social_share.pinterest','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(78,'catalog.products.social_share.whatsapp','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(79,'catalog.products.social_share.linkedin','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(80,'catalog.products.social_share.email','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(81,'catalog.products.social_share.share_message','',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22');
+INSERT INTO `core_config` VALUES (1,'catalog.products.guest-checkout.allow-guest-checkout','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(2,'emails.general.notifications.emails.general.notifications.verification','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(3,'emails.general.notifications.emails.general.notifications.registration','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(4,'emails.general.notifications.emails.general.notifications.customer','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(5,'emails.general.notifications.emails.general.notifications.new-order','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(6,'emails.general.notifications.emails.general.notifications.new-admin','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(7,'emails.general.notifications.emails.general.notifications.new-invoice','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(8,'emails.general.notifications.emails.general.notifications.new-refund','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(9,'emails.general.notifications.emails.general.notifications.new-shipment','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(10,'emails.general.notifications.emails.general.notifications.new-inventory-source','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(11,'emails.general.notifications.emails.general.notifications.cancel-order','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(12,'catalog.products.homepage.out_of_stock_items','1',NULL,NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(13,'customer.settings.social_login.enable_facebook','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(14,'customer.settings.social_login.enable_twitter','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(15,'customer.settings.social_login.enable_google','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(16,'customer.settings.social_login.enable_linkedin','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(17,'customer.settings.social_login.enable_github','0','default',NULL,'2023-07-06 23:43:37','2023-07-06 23:43:37'),(18,'general.content.shop.compare_option','0','default','en','2023-07-06 23:43:37','2023-07-07 00:16:57'),(19,'general.content.shop.compare_option','1','default','fr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(20,'general.content.shop.compare_option','1','default','ar','2023-07-06 23:43:37','2023-07-06 23:43:37'),(21,'general.content.shop.compare_option','1','default','de','2023-07-06 23:43:37','2023-07-06 23:43:37'),(22,'general.content.shop.compare_option','1','default','es','2023-07-06 23:43:37','2023-07-06 23:43:37'),(23,'general.content.shop.compare_option','1','default','fa','2023-07-06 23:43:37','2023-07-06 23:43:37'),(24,'general.content.shop.compare_option','1','default','it','2023-07-06 23:43:37','2023-07-06 23:43:37'),(25,'general.content.shop.compare_option','1','default','ja','2023-07-06 23:43:37','2023-07-06 23:43:37'),(26,'general.content.shop.compare_option','1','default','nl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(27,'general.content.shop.compare_option','1','default','pl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(28,'general.content.shop.compare_option','1','default','pt_BR','2023-07-06 23:43:37','2023-07-06 23:43:37'),(29,'general.content.shop.compare_option','1','default','tr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(30,'general.content.shop.wishlist_option','1','default','en','2023-07-06 23:43:37','2023-07-06 23:43:37'),(31,'general.content.shop.wishlist_option','1','default','fr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(32,'general.content.shop.wishlist_option','1','default','ar','2023-07-06 23:43:37','2023-07-06 23:43:37'),(33,'general.content.shop.wishlist_option','1','default','de','2023-07-06 23:43:37','2023-07-06 23:43:37'),(34,'general.content.shop.wishlist_option','1','default','es','2023-07-06 23:43:37','2023-07-06 23:43:37'),(35,'general.content.shop.wishlist_option','1','default','fa','2023-07-06 23:43:37','2023-07-06 23:43:37'),(36,'general.content.shop.wishlist_option','1','default','it','2023-07-06 23:43:37','2023-07-06 23:43:37'),(37,'general.content.shop.wishlist_option','1','default','ja','2023-07-06 23:43:37','2023-07-06 23:43:37'),(38,'general.content.shop.wishlist_option','1','default','nl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(39,'general.content.shop.wishlist_option','1','default','pl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(40,'general.content.shop.wishlist_option','1','default','pt_BR','2023-07-06 23:43:37','2023-07-06 23:43:37'),(41,'general.content.shop.wishlist_option','1','default','tr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(42,'general.content.shop.image_search','1','default','en','2023-07-06 23:43:37','2023-07-06 23:43:37'),(43,'general.content.shop.image_search','1','default','fr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(44,'general.content.shop.image_search','1','default','ar','2023-07-06 23:43:37','2023-07-06 23:43:37'),(45,'general.content.shop.image_search','1','default','de','2023-07-06 23:43:37','2023-07-06 23:43:37'),(46,'general.content.shop.image_search','1','default','es','2023-07-06 23:43:37','2023-07-06 23:43:37'),(47,'general.content.shop.image_search','1','default','fa','2023-07-06 23:43:37','2023-07-06 23:43:37'),(48,'general.content.shop.image_search','1','default','it','2023-07-06 23:43:37','2023-07-06 23:43:37'),(49,'general.content.shop.image_search','1','default','ja','2023-07-06 23:43:37','2023-07-06 23:43:37'),(50,'general.content.shop.image_search','1','default','nl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(51,'general.content.shop.image_search','1','default','pl','2023-07-06 23:43:37','2023-07-06 23:43:37'),(52,'general.content.shop.image_search','1','default','pt_BR','2023-07-06 23:43:37','2023-07-06 23:43:37'),(53,'general.content.shop.image_search','1','default','tr','2023-07-06 23:43:37','2023-07-06 23:43:37'),(54,'general.general.locale_options.weight_unit','kgs','default',NULL,'2023-07-07 00:16:51','2023-07-07 00:16:51'),(55,'general.content.footer.footer_content','','default','en','2023-07-07 00:16:57','2023-07-07 00:16:57'),(56,'general.content.footer.footer_toggle','0','default','en','2023-07-07 00:16:57','2023-07-07 00:16:57'),(57,'general.content.custom_scripts.custom_css','','default',NULL,'2023-07-07 00:16:57','2023-07-07 00:16:57'),(58,'general.content.custom_scripts.custom_javascript','','default',NULL,'2023-07-07 00:16:57','2023-07-07 00:16:57'),(59,'catalog.products.homepage.no_of_new_product_homepage','9',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(60,'catalog.products.homepage.no_of_featured_product_homepage','',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(61,'catalog.products.storefront.mode','grid','default',NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(62,'catalog.products.storefront.products_per_page','','default',NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(63,'catalog.products.storefront.sort_by','name-desc','default',NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(64,'catalog.products.storefront.buy_now_button_display','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(65,'catalog.products.cache-small-image.width','330',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(66,'catalog.products.cache-small-image.height','383',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(67,'catalog.products.cache-medium-image.width','330',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(68,'catalog.products.cache-medium-image.height','383',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(69,'catalog.products.cache-large-image.width','330',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(70,'catalog.products.cache-large-image.height','383',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:42'),(71,'catalog.products.review.guest_review','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(72,'catalog.products.attribute.image_attribute_upload_size','',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(73,'catalog.products.attribute.file_attribute_upload_size','',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(74,'catalog.products.social_share.enabled','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(75,'catalog.products.social_share.facebook','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(76,'catalog.products.social_share.twitter','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(77,'catalog.products.social_share.pinterest','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(78,'catalog.products.social_share.whatsapp','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(79,'catalog.products.social_share.linkedin','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(80,'catalog.products.social_share.email','0',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(81,'catalog.products.social_share.share_message','',NULL,NULL,'2023-07-07 00:17:22','2023-07-07 00:17:22'),(82,'emails.configure.email_settings.sender_name','Katarina Zlajic','default',NULL,'2024-03-22 13:24:18','2024-03-22 13:24:39'),(83,'emails.configure.email_settings.shop_email_from','katarina@mail.com','default',NULL,'2024-03-22 13:24:18','2024-03-22 13:24:18'),(84,'emails.configure.email_settings.admin_name','Admin','default',NULL,'2024-03-22 13:24:18','2024-03-22 13:24:18'),(85,'emails.configure.email_settings.admin_email','admin@mail.com','default',NULL,'2024-03-22 13:24:18','2024-03-22 13:24:18');
 /*!40000 ALTER TABLE `core_config` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1583,8 +1583,8 @@ DROP TABLE IF EXISTS `countries`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `countries` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=256 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1608,8 +1608,8 @@ DROP TABLE IF EXISTS `country_state_translations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `country_state_translations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `default_name` text COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `default_name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `country_state_id` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `country_state_translations_country_state_id_foreign` (`country_state_id`),
@@ -1636,9 +1636,9 @@ DROP TABLE IF EXISTS `country_states`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `country_states` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `country_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `default_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `country_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `default_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `country_id` int unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `country_states_country_id_foreign` (`country_id`),
@@ -1665,8 +1665,8 @@ DROP TABLE IF EXISTS `country_translations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `country_translations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `country_id` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `country_translations_country_id_foreign` (`country_id`),
@@ -1693,11 +1693,11 @@ DROP TABLE IF EXISTS `currencies`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `currencies` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `symbol` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `symbol` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1749,11 +1749,11 @@ DROP TABLE IF EXISTS `customer_groups`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customer_groups` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_user_defined` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `customer_groups_code_unique` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -1777,8 +1777,8 @@ DROP TABLE IF EXISTS `customer_password_resets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customer_password_resets` (
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   KEY `customer_password_resets_email_index` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -1802,8 +1802,8 @@ DROP TABLE IF EXISTS `customer_social_accounts`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customer_social_accounts` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `provider_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `provider_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `provider_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `provider_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `customer_id` int unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -1832,31 +1832,31 @@ DROP TABLE IF EXISTS `customers`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customers` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `last_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gender` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `first_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gender` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `date_of_birth` date DEFAULT NULL,
   `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
   `password` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `api_token` varchar(80) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `api_token` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `customer_group_id` int unsigned DEFAULT NULL,
   `subscribed_to_news_letter` tinyint(1) NOT NULL DEFAULT '0',
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `is_verified` tinyint(1) NOT NULL DEFAULT '0',
   `is_suspended` tinyint unsigned NOT NULL DEFAULT '0',
-  `token` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `notes` text COLLATE utf8mb4_unicode_ci,
-  `phone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `token` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `notes` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `phone` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `customers_email_unique` (`email`),
   UNIQUE KEY `customers_api_token_unique` (`api_token`),
   KEY `customers_customer_group_id_foreign` (`customer_group_id`),
   CONSTRAINT `customers_customer_group_id_foreign` FOREIGN KEY (`customer_group_id`) REFERENCES `customer_groups` (`id`) ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1865,6 +1865,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
+INSERT INTO `customers` VALUES (2,'Ilija','mail',NULL,NULL,'ilija@test.com',NULL,1,'$2y$10$rGSHNIJu4DH5tsEIQ/Ox5.sOreeYoMmwkzlvk8S6nqcQCdeT/iDWa','yJXxm5Ck6pVYoMs0kaBdDM7a7ITY0ARwlw4rzJhiiDWiQJPDCimN2BOlg7wC1GiWsPUrZX4Os7sWn9Y1',2,0,'sXtUR8qu6qR3DZIvjPODNC4PVyy98KZgTn0QfuKbFpU6HZfA0rHtngaIRUQv','2024-03-25 16:53:28','2024-03-28 16:58:47',1,0,'8be026532368ef619a0687927bcf6d58',NULL,'');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1877,15 +1878,15 @@ DROP TABLE IF EXISTS `downloadable_link_purchased`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `downloadable_link_purchased` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `download_bought` int NOT NULL DEFAULT '0',
   `download_used` int NOT NULL DEFAULT '0',
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `customer_id` int unsigned NOT NULL,
   `order_id` int unsigned NOT NULL,
   `order_item_id` int unsigned NOT NULL,
@@ -1920,11 +1921,11 @@ DROP TABLE IF EXISTS `failed_jobs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `failed_jobs` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
@@ -1949,18 +1950,18 @@ DROP TABLE IF EXISTS `inventory_sources`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `inventory_sources` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `contact_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_number` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_fax` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `country` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `city` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `street` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `postcode` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `contact_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contact_email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contact_number` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contact_fax` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `country` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `state` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `city` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `street` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `postcode` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `priority` int NOT NULL DEFAULT '0',
   `latitude` decimal(10,5) DEFAULT NULL,
   `longitude` decimal(10,5) DEFAULT NULL,
@@ -1991,9 +1992,9 @@ DROP TABLE IF EXISTS `invoice_items`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `invoice_items` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sku` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sku` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `qty` int DEFAULT NULL,
   `price` decimal(12,4) NOT NULL DEFAULT '0.0000',
   `base_price` decimal(12,4) NOT NULL DEFAULT '0.0000',
@@ -2002,7 +2003,7 @@ CREATE TABLE `invoice_items` (
   `tax_amount` decimal(12,4) DEFAULT '0.0000',
   `base_tax_amount` decimal(12,4) DEFAULT '0.0000',
   `product_id` int unsigned DEFAULT NULL,
-  `product_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order_item_id` int unsigned DEFAULT NULL,
   `invoice_id` int unsigned DEFAULT NULL,
   `parent_id` int unsigned DEFAULT NULL,
@@ -2038,13 +2039,13 @@ DROP TABLE IF EXISTS `invoices`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `invoices` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `increment_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `state` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `increment_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `state` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_sent` tinyint(1) NOT NULL DEFAULT '0',
   `total_qty` int DEFAULT NULL,
-  `base_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `channel_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `order_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `base_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `channel_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `sub_total` decimal(12,4) DEFAULT '0.0000',
   `base_sub_total` decimal(12,4) DEFAULT '0.0000',
   `grand_total` decimal(12,4) DEFAULT '0.0000',
@@ -2059,7 +2060,7 @@ CREATE TABLE `invoices` (
   `order_address_id` int unsigned DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `transaction_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `transaction_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `reminders` int NOT NULL DEFAULT '0',
   `next_reminder_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -2087,8 +2088,8 @@ DROP TABLE IF EXISTS `jobs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `queue` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` tinyint unsigned NOT NULL,
   `reserved_at` int unsigned DEFAULT NULL,
   `available_at` int unsigned NOT NULL,
@@ -2116,12 +2117,12 @@ DROP TABLE IF EXISTS `locales`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `locales` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `direction` enum('ltr','rtl') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ltr',
-  `locale_image` text COLLATE utf8mb4_unicode_ci,
+  `direction` enum('ltr','rtl') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ltr',
+  `locale_image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
   UNIQUE KEY `locales_code_unique` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -2146,12 +2147,12 @@ DROP TABLE IF EXISTS `marketing_campaigns`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `marketing_campaigns` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `subject` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subject` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mail_to` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spooling` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mail_to` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `spooling` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `channel_id` int unsigned DEFAULT NULL,
   `customer_group_id` int unsigned DEFAULT NULL,
   `marketing_template_id` int unsigned DEFAULT NULL,
@@ -2188,8 +2189,8 @@ DROP TABLE IF EXISTS `marketing_events`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `marketing_events` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `date` date DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -2216,9 +2217,9 @@ DROP TABLE IF EXISTS `marketing_templates`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `marketing_templates` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -2243,7 +2244,7 @@ DROP TABLE IF EXISTS `migrations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `migrations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -2268,7 +2269,7 @@ DROP TABLE IF EXISTS `notifications`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notifications` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `read` tinyint(1) NOT NULL DEFAULT '0',
   `order_id` int unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2333,7 +2334,7 @@ DROP TABLE IF EXISTS `order_comments`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `order_comments` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `comment` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `customer_notified` tinyint(1) NOT NULL DEFAULT '0',
   `order_id` int unsigned DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2362,10 +2363,10 @@ DROP TABLE IF EXISTS `order_items`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `order_items` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `sku` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `coupon_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sku` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `coupon_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `weight` decimal(12,4) DEFAULT '0.0000',
   `total_weight` decimal(12,4) DEFAULT '0.0000',
   `qty_ordered` int DEFAULT '0',
@@ -2396,7 +2397,7 @@ CREATE TABLE `order_items` (
   `tax_amount_refunded` decimal(12,4) DEFAULT '0.0000',
   `base_tax_amount_refunded` decimal(12,4) DEFAULT '0.0000',
   `product_id` int unsigned DEFAULT NULL,
-  `product_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order_id` int unsigned DEFAULT NULL,
   `parent_id` int unsigned DEFAULT NULL,
   `additional` json DEFAULT NULL,
@@ -2428,8 +2429,8 @@ DROP TABLE IF EXISTS `order_payment`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `order_payment` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `method` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `method_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `method` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `method_title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order_id` int unsigned DEFAULT NULL,
   `additional` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2458,10 +2459,10 @@ DROP TABLE IF EXISTS `order_transactions`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `order_transactions` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `transaction_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `payment_method` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `transaction_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `payment_method` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `data` json DEFAULT NULL,
   `invoice_id` int unsigned NOT NULL,
   `order_id` int unsigned NOT NULL,
@@ -2493,24 +2494,24 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `increment_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `channel_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `channel_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_guest` tinyint(1) DEFAULT NULL,
-  `customer_email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `customer_first_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `customer_last_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `customer_company_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `customer_vat_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `shipping_method` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `shipping_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `shipping_description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `coupon_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_first_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_last_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_company_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_vat_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_method` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_description` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `coupon_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_gift` tinyint(1) NOT NULL DEFAULT '0',
   `total_item_count` int DEFAULT NULL,
   `total_qty_ordered` int DEFAULT NULL,
-  `base_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `channel_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `order_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `base_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `channel_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `grand_total` decimal(12,4) DEFAULT '0.0000',
   `base_grand_total` decimal(12,4) DEFAULT '0.0000',
   `grand_total_invoiced` decimal(12,4) DEFAULT '0.0000',
@@ -2543,13 +2544,13 @@ CREATE TABLE `orders` (
   `shipping_refunded` decimal(12,4) DEFAULT '0.0000',
   `base_shipping_refunded` decimal(12,4) DEFAULT '0.0000',
   `customer_id` int unsigned DEFAULT NULL,
-  `customer_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `channel_id` int unsigned DEFAULT NULL,
-  `channel_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `channel_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `cart_id` int DEFAULT NULL,
-  `applied_cart_rule_ids` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `applied_cart_rule_ids` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `shipping_discount_amount` decimal(12,4) DEFAULT '0.0000',
   `base_shipping_discount_amount` decimal(12,4) DEFAULT '0.0000',
   PRIMARY KEY (`id`),
@@ -2578,8 +2579,8 @@ DROP TABLE IF EXISTS `password_resets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `password_resets` (
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   KEY `password_resets_email_index` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -2603,11 +2604,11 @@ DROP TABLE IF EXISTS `personal_access_tokens`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `personal_access_tokens` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `tokenable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tokenable_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `tokenable_id` bigint unsigned NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -2635,9 +2636,9 @@ DROP TABLE IF EXISTS `product_attribute_values`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_attribute_values` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `channel` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `text_value` text COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `channel` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `text_value` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `boolean_value` tinyint(1) DEFAULT NULL,
   `integer_value` int DEFAULT NULL,
   `float_value` decimal(12,4) DEFAULT NULL,
@@ -2706,8 +2707,8 @@ DROP TABLE IF EXISTS `product_bundle_option_translations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_bundle_option_translations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `label` text COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `label` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `product_bundle_option_id` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `product_bundle_option_translations_option_id_locale_unique` (`product_bundle_option_id`,`locale`),
@@ -2733,7 +2734,7 @@ DROP TABLE IF EXISTS `product_bundle_options`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_bundle_options` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_required` tinyint(1) NOT NULL DEFAULT '1',
   `sort_order` int NOT NULL DEFAULT '0',
   `product_id` int unsigned NOT NULL,
@@ -2775,7 +2776,7 @@ CREATE TABLE `product_categories` (
 
 LOCK TABLES `product_categories` WRITE;
 /*!40000 ALTER TABLE `product_categories` DISABLE KEYS */;
-INSERT INTO `product_categories` VALUES (1,1),(1,7);
+INSERT INTO `product_categories` VALUES (1,1);
 /*!40000 ALTER TABLE `product_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2815,7 +2816,7 @@ DROP TABLE IF EXISTS `product_customer_group_prices`;
 CREATE TABLE `product_customer_group_prices` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `qty` int NOT NULL DEFAULT '0',
-  `value_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `value` decimal(12,4) NOT NULL DEFAULT '0.0000',
   `product_id` int unsigned NOT NULL,
   `customer_group_id` int unsigned DEFAULT NULL,
@@ -2847,8 +2848,8 @@ DROP TABLE IF EXISTS `product_downloadable_link_translations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_downloadable_link_translations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` text COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `product_downloadable_link_id` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `link_translations_link_id_foreign` (`product_downloadable_link_id`),
@@ -2874,15 +2875,15 @@ DROP TABLE IF EXISTS `product_downloadable_links`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_downloadable_links` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` decimal(12,4) NOT NULL DEFAULT '0.0000',
-  `sample_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sample_file` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sample_file_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sample_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sample_url` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sample_file` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sample_file_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sample_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `downloads` int NOT NULL DEFAULT '0',
   `sort_order` int DEFAULT NULL,
   `product_id` int unsigned NOT NULL,
@@ -2912,8 +2913,8 @@ DROP TABLE IF EXISTS `product_downloadable_sample_translations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_downloadable_sample_translations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` text COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `product_downloadable_sample_id` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `sample_translations_sample_id_foreign` (`product_downloadable_sample_id`),
@@ -2939,10 +2940,10 @@ DROP TABLE IF EXISTS `product_downloadable_samples`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_downloadable_samples` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `sort_order` int DEFAULT NULL,
   `product_id` int unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2971,15 +2972,15 @@ DROP TABLE IF EXISTS `product_flat`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_flat` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `sku` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `product_number` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sku` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_number` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `url_key` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url_key` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `new` tinyint(1) DEFAULT NULL,
   `featured` tinyint(1) DEFAULT NULL,
   `status` tinyint(1) DEFAULT NULL,
-  `thumbnail` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `thumbnail` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `price` decimal(12,4) DEFAULT NULL,
   `cost` decimal(12,4) DEFAULT NULL,
   `special_price` decimal(12,4) DEFAULT NULL,
@@ -2987,22 +2988,22 @@ CREATE TABLE `product_flat` (
   `special_price_to` date DEFAULT NULL,
   `weight` decimal(12,4) DEFAULT NULL,
   `color` int DEFAULT NULL,
-  `color_label` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `color_label` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `size` int DEFAULT NULL,
-  `size_label` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `size_label` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `channel` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `channel` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `product_id` int unsigned NOT NULL,
   `updated_at` datetime DEFAULT NULL,
   `parent_id` int unsigned DEFAULT NULL,
   `visible_individually` tinyint(1) DEFAULT NULL,
   `min_price` decimal(12,4) DEFAULT NULL,
   `max_price` decimal(12,4) DEFAULT NULL,
-  `short_description` text COLLATE utf8mb4_unicode_ci,
-  `meta_title` text COLLATE utf8mb4_unicode_ci,
-  `meta_keywords` text COLLATE utf8mb4_unicode_ci,
-  `meta_description` text COLLATE utf8mb4_unicode_ci,
+  `short_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `meta_title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `meta_keywords` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `meta_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `width` decimal(12,4) DEFAULT NULL,
   `height` decimal(12,4) DEFAULT NULL,
   `depth` decimal(12,4) DEFAULT NULL,
@@ -3063,8 +3064,8 @@ DROP TABLE IF EXISTS `product_images`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_images` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `path` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `product_id` int unsigned NOT NULL,
   `position` int unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
@@ -3178,8 +3179,8 @@ DROP TABLE IF EXISTS `product_review_images`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_review_images` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `path` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `review_id` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `product_review_images_review_id_foreign` (`review_id`),
@@ -3205,15 +3206,15 @@ DROP TABLE IF EXISTS `product_reviews`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_reviews` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `rating` int NOT NULL,
-  `comment` text COLLATE utf8mb4_unicode_ci,
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `status` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `product_id` int unsigned NOT NULL,
   `customer_id` int DEFAULT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `product_reviews_product_id_foreign` (`product_id`),
   KEY `product_reviews_customer_id_foreign` (`customer_id`),
@@ -3291,8 +3292,8 @@ DROP TABLE IF EXISTS `product_videos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_videos` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `path` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `product_id` int unsigned NOT NULL,
   `position` int unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
@@ -3319,8 +3320,8 @@ DROP TABLE IF EXISTS `products`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `products` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `sku` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sku` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `parent_id` int unsigned DEFAULT NULL,
@@ -3354,9 +3355,9 @@ DROP TABLE IF EXISTS `refund_items`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `refund_items` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sku` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sku` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `qty` int DEFAULT NULL,
   `price` decimal(12,4) NOT NULL DEFAULT '0.0000',
   `base_price` decimal(12,4) NOT NULL DEFAULT '0.0000',
@@ -3368,7 +3369,7 @@ CREATE TABLE `refund_items` (
   `discount_amount` decimal(12,4) DEFAULT '0.0000',
   `base_discount_amount` decimal(12,4) DEFAULT '0.0000',
   `product_id` int unsigned DEFAULT NULL,
-  `product_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order_item_id` int unsigned DEFAULT NULL,
   `refund_id` int unsigned DEFAULT NULL,
   `parent_id` int unsigned DEFAULT NULL,
@@ -3403,13 +3404,13 @@ DROP TABLE IF EXISTS `refunds`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `refunds` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `increment_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `state` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `increment_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `state` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_sent` tinyint(1) NOT NULL DEFAULT '0',
   `total_qty` int DEFAULT NULL,
-  `base_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `channel_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `order_currency_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `base_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `channel_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order_currency_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `adjustment_refund` decimal(12,4) DEFAULT '0.0000',
   `base_adjustment_refund` decimal(12,4) DEFAULT '0.0000',
   `adjustment_fee` decimal(12,4) DEFAULT '0.0000',
@@ -3452,9 +3453,9 @@ DROP TABLE IF EXISTS `roles`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `roles` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `permission_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `permission_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `permissions` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -3481,9 +3482,9 @@ DROP TABLE IF EXISTS `shipment_items`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `shipment_items` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sku` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sku` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `qty` int DEFAULT NULL,
   `weight` int DEFAULT NULL,
   `price` decimal(12,4) DEFAULT '0.0000',
@@ -3491,7 +3492,7 @@ CREATE TABLE `shipment_items` (
   `total` decimal(12,4) DEFAULT '0.0000',
   `base_total` decimal(12,4) DEFAULT '0.0000',
   `product_id` int unsigned DEFAULT NULL,
-  `product_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order_item_id` int unsigned DEFAULT NULL,
   `shipment_id` int unsigned NOT NULL,
   `additional` json DEFAULT NULL,
@@ -3521,21 +3522,21 @@ DROP TABLE IF EXISTS `shipments`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `shipments` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `total_qty` int DEFAULT NULL,
   `total_weight` int DEFAULT NULL,
-  `carrier_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `carrier_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `track_number` text COLLATE utf8mb4_unicode_ci,
+  `carrier_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `carrier_title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `track_number` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `email_sent` tinyint(1) NOT NULL DEFAULT '0',
   `customer_id` int unsigned DEFAULT NULL,
-  `customer_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order_id` int unsigned NOT NULL,
   `order_address_id` int unsigned DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `inventory_source_id` int unsigned DEFAULT NULL,
-  `inventory_source_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `inventory_source_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `shipments_order_id_foreign` (`order_id`),
   KEY `shipments_inventory_source_id_foreign` (`inventory_source_id`),
@@ -3563,8 +3564,8 @@ DROP TABLE IF EXISTS `sitemaps`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sitemaps` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `path` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `generated_at` datetime DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -3590,20 +3591,20 @@ DROP TABLE IF EXISTS `sliders`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sliders` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `path` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `channel_id` int unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `slider_path` text COLLATE utf8mb4_unicode_ci,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_path` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expired_at` date DEFAULT NULL,
   `sort_order` int unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `sliders_channel_id_foreign` (`channel_id`),
   CONSTRAINT `sliders_channel_id_foreign` FOREIGN KEY (`channel_id`) REFERENCES `channels` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3612,7 +3613,7 @@ CREATE TABLE `sliders` (
 
 LOCK TABLES `sliders` WRITE;
 /*!40000 ALTER TABLE `sliders` DISABLE KEYS */;
-INSERT INTO `sliders` VALUES (1,'home1','slider_images/Default/QKnkI6pOluIn12k6H5O8uH6xetP5gKkdZvn8BijK.png','',1,'2023-07-07 00:48:57','2023-07-07 00:48:57','','en',NULL,0);
+INSERT INTO `sliders` VALUES (5,'katarina-zlajic','slider_images/Default/yBx3X9LkV7WMYtMbBTMqWIrQVG7NK3faASTkBjWq.png','<p>Katarina Zlajic</p>',1,'2024-03-28 17:31:33','2024-03-28 17:31:33','','en',NULL,0),(6,'katarina-zlajic-nakit','slider_images/Default/2eyK70FUkCGkpWLyfXQ5p5741gGuOwl78QUvjKQG.png','<p>Katarina Zlajic Nakit</p>',1,'2024-03-28 17:32:41','2024-03-28 17:32:41','','en',NULL,1),(7,'katarina-zlajic-torbe','slider_images/Default/Owi70gSLBt4EcjjNCcjMtBPrLTd9SVDUM35jmp6G.png','<p>Katarina Zlajic Torbe</p>',1,'2024-03-28 17:33:57','2024-03-28 17:33:57','','en',NULL,2),(8,'katarina-zlajic-jewerly','slider_images/Default/ReB2ctkbEjUeTnnw1Uvr6aaNe1IxcQeyXSnNZm0L.png','<p>Katarina Zlajic Jewerly</p>',1,'2024-03-28 17:35:08','2024-03-28 17:35:08','','en',NULL,3);
 /*!40000 ALTER TABLE `sliders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3625,9 +3626,9 @@ DROP TABLE IF EXISTS `subscribers_list`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subscribers_list` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_subscribed` tinyint(1) NOT NULL DEFAULT '0',
-  `token` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `token` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `channel_id` int unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -3658,9 +3659,9 @@ DROP TABLE IF EXISTS `tax_categories`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tax_categories` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -3716,13 +3717,13 @@ DROP TABLE IF EXISTS `tax_rates`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tax_rates` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `identifier` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `identifier` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_zip` tinyint(1) NOT NULL DEFAULT '0',
-  `zip_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `zip_from` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `zip_to` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `state` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `country` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `zip_code` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `zip_from` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `zip_to` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `state` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `country` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `tax_rate` decimal(12,4) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -3749,10 +3750,10 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -3778,7 +3779,7 @@ DROP TABLE IF EXISTS `velocity_contents`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `velocity_contents` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `content_type` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `position` int unsigned DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -3806,15 +3807,15 @@ DROP TABLE IF EXISTS `velocity_contents_translations`;
 CREATE TABLE `velocity_contents_translations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `content_id` int unsigned DEFAULT NULL,
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `custom_title` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `custom_heading` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `page_link` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `custom_title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `custom_heading` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `page_link` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `link_target` tinyint(1) NOT NULL DEFAULT '0',
-  `catalog_type` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `products` text COLLATE utf8mb4_unicode_ci,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `locale` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `catalog_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `products` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `locale` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -3871,22 +3872,22 @@ DROP TABLE IF EXISTS `velocity_meta_data`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `velocity_meta_data` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `home_page_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `footer_left_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `footer_middle_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `home_page_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `footer_left_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `footer_middle_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `slider` tinyint(1) NOT NULL DEFAULT '0',
   `advertisement` json DEFAULT NULL,
   `sidebar_category_count` int NOT NULL DEFAULT '9',
   `featured_product_count` int NOT NULL DEFAULT '10',
   `new_products_count` int NOT NULL DEFAULT '10',
-  `subscription_bar_content` text COLLATE utf8mb4_unicode_ci,
+  `subscription_bar_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `product_view_images` json DEFAULT NULL,
-  `product_policy` text COLLATE utf8mb4_unicode_ci,
-  `locale` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `channel` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `header_content_count` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_policy` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `locale` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `channel` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `header_content_count` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3948,4 +3949,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-06 23:19:13
+-- Dump completed on 2024-03-28 14:13:37

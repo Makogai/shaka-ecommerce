@@ -1,3 +1,87 @@
+@push('css')
+    <style type="text/css">
+        .slider{
+            height:5px;
+            border-radius: 5px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .progress{
+            height: 5px;
+            position: absolute;
+            border-radius: 5px;
+            background-color: #333333;
+        }
+
+        .category-p{
+            color: #232427;
+            font-family: "Open Sans", sans-serif !important;
+            font-size: 16px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: normal !important;
+            letter-spacing: 3px !important;
+        }
+
+        .option-name{
+            color: #232427;
+            font-family: "Open Sans", sans-serif !important;
+            font-size: 17px !important;
+            font-style: normal !important;
+            line-height: normal !important;
+            letter-spacing: 1px !important;
+            padding-left: 10px;
+            /*border-left: 2px solid black;*/
+        }
+
+        .range-input{
+            position: relative;
+        }
+
+        .range-input input{
+            position: absolute;
+            top:-5px;
+            height: 5px;
+            width: 100%;
+            background: none;
+            pointer-events: none;
+            appearance:none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb{
+            height: 17px;
+            width: 17px;
+            border-radius: 50%;
+            pointer-events: auto;
+            -webkit-appearance: none;
+            background: #333333;
+        }
+
+        input[type="range"]::-moz-range-thumb{
+            height: 17px;
+            width: 17px;
+            border:none;
+            border-radius: 50%;
+            pointer-events: auto;
+            -moz-appearance: none;
+            background: #333333;
+        }
+
+        .gift_card{
+            font-weight: 500;
+            font-size: 16px !important;
+            letter-spacing: 2px;
+            line-height: 19px !important;
+            margin-bottom: 14px !important;
+        }
+        .gift_card:hover{
+            text-decoration: none;
+        }
+    </style>
+@endpush
+
 <div class="layered-filter-wrapper p-0 py-4 left">
     {!! view_render_event('bagisto.shop.products.list.layered-nagigation.before') !!}
 
@@ -9,17 +93,10 @@
     {!! view_render_event('bagisto.shop.products.list.layered-nagigation.after') !!}
 </div>
 
+
 @push('scripts')
     <script type="text/x-template" id="layered-navigation-template">
         <div v-if="attributes.length > 0">
-            <div class="row border border-2 w-100 m-0 p-0">
-                <div class="col-4 m-0 p-0"></div>
-                <div class="col-8 m-0 p-0">
-                    <h5 class="text-left font-shaka py-3">Collection</h5>
-                </div>
-            </div>
-
-
             <div class="filter-content border border-top-0 row p-0 m-0">
                 <div class="col-4 p-0 m-0"></div>
                 <div class="filter-attributes col-8 p-0 m-0">
@@ -37,52 +114,35 @@
                         @onFilterAdded="addFilters('category', $event)">
                     </filter-attribute-item>
                 </div>
-            </div>
-
-            <div class="border border-2 border-top-0 w-100 row m-0 p-0">
-                <div class="col-4 m-0 p-0"></div>
-                <div class="col-8 m-0 p-0">
-                    <h5 class="text-left font-shaka py-3">Material</h5>
-                </div>
-            </div>
-            <div class="filter-content border border-top-0 row m-0 p-0">
                 <div class="col-4 p-0 m-0"></div>
-                <div class="filter-attributes p-0 m-0 col-8 border-0">
-                    <filter-attribute-item
-                        v-for='(attribute, index) in materials'
-                        :key="index"
-                        :index="index"
-                        :attribute="attribute"
-                        :appliedFilterValues="appliedFilters[attribute.code]"
-                        :max-price-src="maxPriceSrc"
-                        @onFilterAdded="addFilters(attribute.code, $event)">
-                    </filter-attribute-item>
+                <div class="filter-attributes col-8 p-0 m-0 mb-2">
+                    <a href="{{route("shop.giftCard")}}" class="text-uppercase text-shaka cursor-pointer gift_card">Gift Card</a>
                 </div>
             </div>
-
             <div class="border border-2 border-top-0 w-100 row m-0 p-0">
                 <div class="col-4 m-0 p-0"></div>
                 <div class="col-8 m-0 p-0">
                     <h5 class="text-left font-shaka py-3">Price range</h5>
                 </div>
-            </div>
-            <div class="filter-content border border-top-0 row p-0 m-0">
-                <div class="col-4 p-0 m-0"></div>
-
-                <div class="filter-attributes p-0 col-8 m-0 py-4 pr-4">
-                    <filter-attribute-item
-                        :attribute="attributes[2]"
-                        :appliedFilterValues="appliedFilters[attributes[2].code]"
-                        :max-price-src="maxPriceSrc"
-                        @onFilterAdded="addFilters(attributes[2].code, $event)">
-                    </filter-attribute-item>
+                <div class="col-4 m-0 p-0"></div>
+                <div class="col-6 m-0 px-0">
+                <div class="slider">
+                    <div class="progress" :style="{ left: progressLeft, right: progressRight }"></div>
+                </div>
+                    <div class="range-input">
+                        <input type="range" id="minPriceFilter" @change="applyPriceRangeFilter" class="range-min cursor-pointer" min="0" :max="maxPriceByCategory" step="10" v-model="appliedFilters.price[0]" />
+                        <input type="range" id="maxPriceFilter" @change="applyPriceRangeFilter" class="range-max cursor-pointer" min="0" :max="maxPriceByCategory" step="10" v-model="appliedFilters.price[1]" />
+                    </div>
+                    <div class="flex row justify-content-between my-3 px-3">
+                        <p>@{{ appliedFilters.price[0] }} </p>
+                        <p>@{{ appliedFilters.price[1] }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </script>
 
     <script type="text/x-template" id="filter-attribute-item-template">
-
 
         <div>
             <div class="price-range-wrapper" v-if="attribute.type === 'price'">
@@ -105,11 +165,11 @@
             </div>
             <div v-if="attribute.type === 'category'">
                 <div v-if="attribute.children.length === 0">
-                    <h6 @click="changeCategory(attribute.id)" class="text-uppercase display-inbl">@{{ attribute.name ? attribute.name : attribute.admin_name }}</h6>
+                    <h6 @click="changeCategory(attribute.id)" class="text-uppercase display-inbl cursor-pointer category-p" >@{{ attribute.name ? attribute.name : attribute.admin_name }}</h6>
                 </div>
                 <div :class="`cursor-pointer filter-attributes-item border-bottom-0 ${active ? 'active' : ''}`" v-else>
                     <div class="filter-attributes-title" @click="active = ! active">
-                        <h6 class="text-uppercase display-inbl">@{{ attribute.name ? attribute.name : attribute.admin_name }}</h6>
+                        <h6 class="text-uppercase display-inbl cursor-pointer category-p" >@{{ attribute.name ? attribute.name : attribute.admin_name }}</h6>
 
                         <div class="float-right display-table pr-4">
                             {{--                    <span class="link-color cursor-pointer" v-if="appliedFilters.length" @click.stop="clearFilters()">--}}
@@ -119,11 +179,6 @@
                             <i :class="`icon text-right fs16 cell ${active ? 'rango-arrow-up' : 'rango-arrow-down'}`"></i>
                         </div>
                     </div>
-
-
-
-
-
                     <div class="filter-attributes-content border-bottom-0">
                         <ul type="none" class="items px-0 mx-0">
                             <li
@@ -139,17 +194,14 @@
                                     {{--                                        v-bind:value="option.id"--}}
                                     {{--                                        v-model="appliedFilters"--}}
                                     {{--                                        @change="addFilter($event)"/>--}}
-                                    <span :class="`${isActiveCategory(option.id) ? 'font-weight-bold' : ''}`">@{{ option.name ? option.name : option.admin_name }}</span>
+                                    <span :class="`${isActiveCategory(option.id) ? 'font-weight-bold' : ''}`" class="option-name">@{{ option.name ? option.name : option.admin_name }}</span>
                                 </div>
                             </li>
-
-
                         </ul>
-
                     </div>
                 </div>
                 <div v-if="sale">
-                    <h6 @click="filterSale" class="text-uppercase display-inbl text-shaka">SALE</h6>
+                    <h6 @click="filterSale" class="text-uppercase display-inbl text-shaka cursor-pointer">SALE</h6>
                 </div>
             </div>
             <div :class="`cursor-pointer border-0 filter-attributes-item ${active ? 'active' : ''}`" v-if="attribute.code === 'material'">
@@ -190,6 +242,7 @@
     </script>
 
     <script>
+
         Vue.component('layered-navigation', {
             template: '#layered-navigation-template',
 
@@ -200,22 +253,36 @@
 
             data: function () {
                 return {
-                    appliedFilters: {},
+                    maxPriceByCategory: 1000,
+                    appliedFilters: {
+                        price: [0, 0]
+                    },
                     attributes: [],
                     categories: [],
-                    materials: [],
+                    materials: []
                 }
             },
 
             created: function () {
+                this.setMaxPrice();
                 this.setFilterAttributes();
-
                 this.setAppliedFilters();
             },
 
+            computed: {
+                progressLeft: function() {
+                    const minPriceInput = this.appliedFilters.price[0];
+
+                    return (minPriceInput / this.maxPriceByCategory) * 100 + '%';
+                },
+                progressRight: function() {
+                    const maxPriceInput = this.appliedFilters.price[1];
+
+                    return 100 - (maxPriceInput / this.maxPriceByCategory) * 100 + '%';
+                }
+            },
+
             methods: {
-
-
                 setFilterAttributes: function () {
                     axios
                         .get(this.attributeSrc)
@@ -234,10 +301,20 @@
                     });
                 },
 
+                setMaxPrice: function (){
+                    axios
+                        .get(this.maxPriceSrc)
+                        .then((response) => {
+                            this.maxPriceByCategory = Math.ceil(response.data.max_price / 10) * 10;
+                            if(this.appliedFilters.price[1]===0){
+                                this.appliedFilters.price[1] = this.maxPriceByCategory
+                            }
+                        });
+                },
+
                 addFilters: function (attributeCode, filters) {
 
                     if(attributeCode ==='isSaleable'){
-
                         // If isSaleable is already applied, set its value to false
                         if (this.appliedFilters.hasOwnProperty('isSaleable')){
                             delete this.appliedFilters['isSaleable'];
@@ -246,14 +323,11 @@
                         }
                     }
                     else {
-
-
                         if (filters.length) {
                             this.appliedFilters[attributeCode] = filters;
                         } else {
                             delete this.appliedFilters[attributeCode];
                         }
-
                     }
 
                     this.applyFilter();
@@ -270,6 +344,14 @@
 
                     window.location.href = "?" + params.join('&');
                 },
+
+                applyPriceRangeFilter: function (){
+                    let minPrice = document.getElementById("minPriceFilter").value;
+                    let maxPrice = document.getElementById("maxPriceFilter").value;
+
+                    this.appliedFilters.price = [minPrice, maxPrice];
+                    this.applyFilter();
+                }
             }
         });
 
@@ -284,8 +366,8 @@
                 'maxPriceSrc',
                 'type',
                 'attributeFilers',
-                'sale'
-
+                'sale',
+                'applyPriceRangeFilter'
             ],
 
             data: function () {
@@ -330,7 +412,7 @@
                     this.active = true;
                 }
 
-                this.setMaxPrice();
+                //this.setMaxPrice();
             },
 
             methods: {
@@ -340,23 +422,6 @@
                         return this.attributeFilers['category'].includes(id.toString())
                     }
                     return false
-                },
-                setMaxPrice: function () {
-                    if (this.attribute['code'] != 'price') {
-                        return;
-                    }
-
-                    axios
-                        .get(this.maxPriceSrc)
-                        .then((response) => {
-                            let maxPrice = response.data.max_price;
-                            this.sliderConfig.max = maxPrice ? ((parseInt(maxPrice) !== 0 || maxPrice) ? parseInt(maxPrice) : 500) : 500;
-
-                            if (!this.appliedFilterValues) {
-                                this.sliderConfig.value = [0, this.sliderConfig.max];
-                                this.sliderConfig.priceTo = this.sliderConfig.max;
-                            }
-                        });
                 },
 
                 addFilter: function (e) {
@@ -379,7 +444,6 @@
                 },
 
                 changeCategory: function (id) {
-                    console.log(id)
                     this.appliedFilters.push(id);
                     this.$emit('onFilterAdded', this.appliedFilters);
                 },
